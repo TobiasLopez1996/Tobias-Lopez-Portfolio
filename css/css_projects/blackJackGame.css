@@ -1,0 +1,108 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url(https://wallup.net/wp-content/uploads/2019/09/355075-blackjack.jpg);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.blackJackContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: green;
+    width: 45%;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 5vw;
+    letter-spacing: .3rem;
+    padding: 2vh;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+#message-el {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 2vw;
+    letter-spacing: .3rem;
+    margin: 6vh;
+}
+
+#cards-el,
+#sum-el {
+    font-size: 2vw;
+    padding: 1vh;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 4vh;
+}
+
+button {
+    width: 40%;
+    height: 10%;
+    background-color: goldenrod;
+    font-size: 2vw;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 3px 6px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#player-el {
+    font-size: 1.5vw;
+    letter-spacing: .3vw;
+    padding-bottom: 1vh;
+    font-style: italic;
+}
+
+/* petite optimisation pour les petits écrans */
+
+@media (max-width: 800px) {
+    .blackJackContainer {
+        width: 70%;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    #message-el {
+        letter-spacing: 0;
+        margin: 3vh;
+        font-size: 20px;
+    }
+    #cards-el,
+    #sum-el {
+    padding: .3vh;
+    font-size: 20px;
+    }
+    .buttons {
+        flex-direction: column;
+        margin: 2vh;
+    }
+    button {
+        height: 20px;
+        font-size: 15px;
+    }
+    #player-el {
+        font-size: 20px;
+    }
+}

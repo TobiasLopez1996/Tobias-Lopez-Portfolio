@@ -1,0 +1,134 @@
+h2 {
+    text-align: center;
+    font-family: $font-title;
+    font-size: 2rem;
+    letter-spacing: .3rem;
+    margin-bottom: 15vh;
+    color: color(color-outline-light-mode);
+    transition: color 3s ease;
+    &.dark {
+        color: color(color-outline-dark-mode);
+    }
+}
+
+.skills {
+    display: grid;
+    grid-template-rows: 10vh 20vh auto;
+    width: 100%;
+    padding: 10vh 5vh 28vh;
+    gap: 5vh;
+    background-color: color(primary-bg-color-light-mode);
+    transition: background-color 1s ease;
+    &.dark {
+        background-color: color(primary-bg-color-dark-mode);
+    }
+
+    .description {
+        font-family: $font-text;
+        text-align: justify;
+        font-style: italic;
+        font-size: .9rem;
+    }
+
+    .container-slider {
+        display: grid;
+        place-items: center;
+        gap: 30px 20px;
+        width: 100%;
+    }
+
+    .slider {
+        box-shadow: 0 0 5px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        height: 35vh;
+        width: inherit;
+        aside p {
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+            letter-spacing: .3rem;
+            font-family: $font-title;
+        }
+
+        .slides {
+            height: 100%;
+            background-color: color(secondary-bg-color-light-mode);
+            opacity: 0;
+            position: absolute;
+            inset: 0;
+            transition: opacity .7s ease;
+            &.active {
+                opacity: 1;
+            }
+            button {
+                margin: 0 1rem;
+                cursor: pointer;
+                border-radius: 999px;
+                background-color: #000;
+                color: #fff;
+                padding: 7px;
+                transition: all 3s ease;
+                &.dark {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+            &.dark {
+                background-color: color(secondary-bg-color-dark-mode);
+            }
+        }
+    }
+}
+
+.slide1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .gathering {
+        @include flexCenter;
+        flex-direction: column;
+    }
+}
+.slide2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .skills-list {
+        padding-left: 10px;
+        list-style-type: disc;
+        li {
+            padding: 10px 0;
+            font-size: 0.8rem;
+            font-family: $font-text;
+        }
+    } 
+}
+
+@media screen and (min-width: 800px) {
+        h2 {
+            font-size: 3rem !important;
+        }
+        .description {
+            font-size: 1.2rem !important;
+        }
+        .skills-list {
+            li {
+                font-size: 1rem !important;
+            }
+        } 
+}
+@media screen and (min-width: 1000px) {
+    .container-slider {
+        grid-template-columns: repeat(auto-fill, 45%);
+        place-content: center;
+    }
+}
+@media screen and (min-width: 1400px) {
+        h2 {
+            font-size: 4rem !important;
+        }
+        .description {
+            font-size: 1.5rem !important;
+        }
+}

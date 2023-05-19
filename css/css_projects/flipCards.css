@@ -1,0 +1,110 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(https://www.pixelstalk.net/wp-content/uploads/images5/4K-Plane-Wallpaper-HD-Free-download.jpg) center/cover;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-self: center;
+    font-family: 'Tillana', cursive;
+}
+
+.card, 
+.frontCard, 
+.backCard {
+    width: 300px;
+    height: 400px;
+    background-color: orangered;
+    border-radius: 4px;
+}
+
+.frontCard, 
+.backCard {
+    box-shadow: 5px 5px 20px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: grid;
+}
+
+.cardWrapper {
+    perspective: 1000px;
+    perspective-origin: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: relative;
+    transition: transform 1.3s cubic-bezier(0.2, 0.45, 0.05, 1.6);
+    transform-style: preserve-3d;
+}
+
+.frontCard {
+    grid-template-rows: 3fr 50px 50px 2fr;
+    position: relative;
+}
+
+.frontCard .imgCard {
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.titleCard {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    font-family: 'Great Vibes', cursive;
+}
+
+.iconCard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.material-symbols-outlined {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.textCard {
+    text-align: justify;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.backCard {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    grid-template-rows: 50px 2fr 50px 3fr;
+}
+
+.backCard .iconCard {
+    border-bottom: none;
+    border-top: 1px solid black;
+}
+
+.backCard .textCard {
+    padding-top: 15px;
+}
+
+.backCard .imgCard {
+    background-size: cover;
+    background-position: center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

@@ -1,0 +1,115 @@
+@import '../css/reset';
+@import '../css/config';
+@import '../css/header';
+@import '../css/footer';
+@import '../css/skills';
+@import '../css/projects';
+
+body {
+    color: #000;
+    transition: color 3s ease;
+    &.dark {
+        color: #fff;
+    }
+}
+
+main {
+    background: 
+    linear-gradient(
+        to right,
+        rgba(#fff, 0.2),
+        rgba(#fff, 0.5)
+    ),
+    no-repeat top/cover url(../img/bg-main-landscape.jpg); 
+    @include flexCenter;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    &.dark {
+        background:
+        linear-gradient(
+            to right,
+            rgba(#000, 0.5),
+            rgba(#000, 0.8)
+        ),
+        no-repeat top/cover url(../img/bg-main-landscape.jpg);
+    }
+
+    .intro {
+        min-height: 1rem;
+        border-bottom: 2px solid #000;
+        font-weight: 500;
+        font-size: 1.2rem;
+        transition: color .1s ease, border-bottom 3s ease;
+        font-family: $font-title;
+        &.dark {
+            border-bottom: 1px solid #fff;
+        }
+        strong {
+            font-size: 2.2rem;
+            color: color(color-outline-light-mode);
+            font-family: $font-title;
+            font-weight: 500;
+            transition: color 1s ease;
+            &.dark {
+                color: color(color-outline-dark-mode);
+            }
+        }
+    }
+    p {
+        min-height: 6rem;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: $font-text;
+        padding: 1rem 0;
+        font-weight: 600;
+    } 
+}
+
+@media screen and (min-width: 800px) {
+    main {
+        p,
+        .intro {
+            font-size: 1.9rem !important;
+        }
+        strong {
+            font-size: 2.9rem !important;
+        }
+    }
+}
+@media screen and (min-width: 1400px) {
+    main {
+        p,
+        .intro {
+            font-size: 2.5rem !important;
+        }
+        strong {
+            font-size: 3.5rem !important;
+        }
+    }
+}
+@media (orientation: portrait) {
+    main {
+        background: 
+        linear-gradient(
+            to right,
+            rgba(#fff, 0.2),
+            rgba(#fff, 0.5)
+        ),
+        no-repeat top/cover url(../img/bg-main-portrait.jpg); 
+        height: 100vh;
+        width: 100%;
+        @include flexCenter;
+        flex-direction: column;
+        &.dark {
+            background:
+            linear-gradient(
+                to right,
+                rgba(#000, 0.5),
+                rgba(#000, 0.8)
+            ),
+            no-repeat top/cover url(../img/bg-main-portrait.jpg);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+$color: (
+    "primary-bg-color-dark-mode": #141414,
+    "secondary-bg-color-dark-mode": #292929,
+    "primary-bg-color-light-mode": #F5F5F5,
+    "secondary-bg-color-light-mode": #E0E0E0,
+    "color-outline-light-mode": #2A3F79,
+    "color-outline-dark-mode": #95A9DA,
+    );
+@function color($color-name) {
+    @return map-get($color, $color-name)
+}
+
+$font-title: 'Righteous', cursive;
+$font-text: 'Abel', sans-serif;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@for $i from 1 through 3 {
+    .nav-list:nth-child(#{$i}) {
+        transition-delay: ($i * 0.3s) + .3s;
+    }
+}
