@@ -398,7 +398,7 @@ h2.dark {
   font-family: "Abel", sans-serif;
   text-align: center;
   font-size: 0.9rem;
-  margin: 15vh;
+  margin: 15vh 0;
   position: relative;
 }
 .projects .projects-footer a {
