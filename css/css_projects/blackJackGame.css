@@ -5,9 +5,8 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     height: 100vh;
     width: 100%;
     background: url(https://wallup.net/wp-content/uploads/2019/09/355075-blackjack.jpg);
@@ -20,29 +19,29 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: green;
-    width: 45%;
+    width: 320px;
+    border-radius: 5px;
 }
 
 h1 {
     color: goldenrod;
-    font-size: 5vw;
-    letter-spacing: .3rem;
-    padding: 2vh;
+    font-size: 2rem;
+    padding: 20px 0 50px;
+    letter-spacing: 7px;
     font-family: 'Sedgwick Ave Display', cursive;
 }
 
 #message-el {
     font-style: italic;
     font-weight: 100;
-    font-size: 2vw;
-    letter-spacing: .3rem;
-    margin: 6vh;
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
 }
 
 #cards-el,
 #sum-el {
-    font-size: 2vw;
-    padding: 1vh;
+    font-size: .9rem;
+    padding: 10px 0 5px;
     font-weight: bold;
 }
 
@@ -50,16 +49,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 4vh;
+    width: 95%;
+    margin: 10px;
 }
 
 button {
-    width: 40%;
-    height: 10%;
+    width: 50%;
     background-color: goldenrod;
-    font-size: 2vw;
+    font-size: 1rem;
     border: none;
     outline: none;
     border-radius: 3px;
@@ -69,40 +66,35 @@ button {
 }
 
 #player-el {
-    font-size: 1.5vw;
-    letter-spacing: .3vw;
-    padding-bottom: 1vh;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 50px 0 10px;
     font-style: italic;
 }
 
 /* petite optimisation pour les petits écrans */
 
-@media (max-width: 800px) {
+@media screen and (min-width: 800px) {
     .blackJackContainer {
-        width: 70%;
+        width: 40%;
     }
     h1 {
-        font-size: 30px;
+        font-size: 3rem;
     }
     #message-el {
-        letter-spacing: 0;
-        margin: 3vh;
-        font-size: 20px;
+        font-size: 1.6rem;
     }
     #cards-el,
     #sum-el {
-    padding: .3vh;
-    font-size: 20px;
-    }
+    font-size: 1.1rem;
+}
     .buttons {
-        flex-direction: column;
-        margin: 2vh;
+        max-width: 400px;
     }
     button {
-        height: 20px;
-        font-size: 15px;
+        font-size: 1.2rem;
     }
     #player-el {
-        font-size: 20px;
+        font-size: 1.2rem;
     }
 }

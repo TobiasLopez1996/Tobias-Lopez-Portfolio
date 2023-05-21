@@ -26,20 +26,25 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 40px;
-    padding: 20px 0;
+    font-size: 2rem;
+    padding: 20px;
 }
 
 #count-el {
-    font-size: 40px;
+    font-size: 3rem;
     margin-bottom: 25px;
+}
+
+.gathering {
+    display: flex;
+    flex-direction: column;
 }
 
 button {
     background: none;
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 1.5rem;
     margin: 15px;
     position: relative;
     padding: 2px 10px;
@@ -142,7 +147,19 @@ button {
 
 
 #save-el {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-style: italic;
-    padding: 15px;
+    padding: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        width: 40%;
+    } 
+    .gathering {
+        flex-direction: row;
+    }
+    h1 {
+        font-size: 3rem;
+    }
 }

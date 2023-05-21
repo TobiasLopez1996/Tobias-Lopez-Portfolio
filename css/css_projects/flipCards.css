@@ -5,11 +5,11 @@
 }
 
 body {
-    background: url(https://www.pixelstalk.net/wp-content/uploads/images5/4K-Plane-Wallpaper-HD-Free-download.jpg) center/cover;
-    height: 100vh;
+    background: no-repeat url(https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80) center/cover;
+    min-height: 100vh;
     width: 100%;
     display: grid;
-    place-self: center;
+    place-items: center;
     font-family: 'Tillana', cursive;
 }
 
@@ -18,13 +18,13 @@ body {
 .backCard {
     width: 300px;
     height: 400px;
-    background-color: orangered;
+    background-color: #FF600A;
     border-radius: 4px;
 }
 
 .frontCard, 
 .backCard {
-    box-shadow: 5px 5px 20px;
+    box-shadow: 5px 5px 30px 10px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     display: grid;
@@ -36,7 +36,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6%;
+    flex-wrap: wrap;
+    gap: 5vh;
+    padding: 3vh;
 }
 
 .card:hover {

@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-                font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: 'Edu NSW ACT Foundation', cursive;
 }
 
 form {
@@ -26,6 +26,7 @@ form {
 }
 
 h1 {
+    font-size: 1.2rem;
     font-family: 'Cinzel', serif;
     padding: 20px;
     text-align: center;
@@ -105,7 +106,7 @@ button:hover {
 }
 
 .consent {
-  padding: 0 10px;
+padding: 0 10px;
 }
 
 .consent label a::before {
@@ -162,10 +163,10 @@ span:nth-child(2) {
 @keyframes btnAnim2 {
     0% {
         top: -100%;
-   }
-   50%, 100% {
+}
+50%, 100% {
     top: 100%;
-   }
+}
 }
 
 span:nth-child(3) {
@@ -203,5 +204,14 @@ span:nth-child(4) {
     }
     50%, 100% {
         bottom: 100%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    form {
+        width: 50%
+    }
+    h1 {
+        font-size: 2rem;
     }
 }
