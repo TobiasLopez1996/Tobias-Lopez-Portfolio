@@ -17,20 +17,30 @@
             width: 100%;
             position: relative;
             figcaption {
+                @include flexCenter;
+                flex-direction: column;
                 position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
+                inset: 0;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 background-color: #000;
-                opacity: .5;
+                color: #fff;
+                opacity: .7;
                 border-radius: 10px;
                 transition: 3s ease;
+                h3 {
+                    font-size: clamp(1.5rem, 4vw, 3rem)
+                }
+                .projects-buttons {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                }
                 &.dark {
                     background-color: #fff;
+                    color: #000;
                 }
                 a {
                     border: 2px solid #fff;

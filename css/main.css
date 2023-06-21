@@ -353,21 +353,33 @@ h2.dark {
   position: relative;
 }
 .projects .cards figure figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #000;
-  opacity: 0.5;
+  color: #fff;
+  opacity: 0.7;
   border-radius: 10px;
   transition: 3s ease;
 }
+.projects .cards figure figcaption h3 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+.projects .cards figure figcaption .projects-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
 .projects .cards figure figcaption.dark {
   background-color: #fff;
+  color: #000;
 }
 .projects .cards figure figcaption a {
   border: 2px solid #fff;
