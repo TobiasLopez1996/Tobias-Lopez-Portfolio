@@ -1,14 +1,22 @@
 {
-  "name": "scroll-train",
+  "name": "porfolio-dependancies",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "gsap": "^3.12.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiasLopez1996/Tobias-Lopez-Portfolio.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "gsap": "^3.11.5"
-  }
+  "bugs": {
+    "url": "https://github.com/TobiasLopez1996/Tobias-Lopez-Portfolio/issues"
+  },
+  "homepage": "https://github.com/TobiasLopez1996/Tobias-Lopez-Portfolio#readme"
 }

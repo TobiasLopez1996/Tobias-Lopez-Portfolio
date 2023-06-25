@@ -1,4 +1,4 @@
-import { gsap } from "Tobias-Lopez-Portfolio/node_modules/gsap/src/index.js"
+import { gsap } from "../node_modules/gsap/src/index.js"
 
 const hamburgerButton = document.querySelector(".nav-toggler")
 const navigation = document.querySelector("nav")
