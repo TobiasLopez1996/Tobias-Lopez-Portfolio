@@ -1,4 +1,4 @@
-import gsap from "../../node_modules/gsap/src/index.js"
+import gsap from "/Tobias-Lopez-Portfolio/node_modules/gsap/src/index.js"
 import ScrollTrigger from "../../node_modules/gsap/src/ScrollTrigger.js"
 
 // anim home
