@@ -1,5 +1,5 @@
-import { gsap } from "../../node_modules/gsap/src/index.js"
-import { ScrollTrigger } from "../../node_modules/gsap/src/ScrollTrigger.js"
+import gsap from "../../node_modules/gsap/src/index.js"
+import ScrollTrigger from "../../node_modules/gsap/src/ScrollTrigger.js"
 
 // anim home
 const animRight = document.querySelectorAll(".anim-right")
