@@ -8,7 +8,7 @@ function setAnimTranslate() {
 window.addEventListener("DOMContentLoaded", setAnimTranslate)
 
 // anim images
-const imgAnim = document.querySelectorAll(".img_appear");
+const imgAnim = document.querySelectorAll(".img_appear")
 gsap.registerPlugin(ScrollTrigger)
 imgAnim.forEach((element) => {
 gsap.fromTo(
