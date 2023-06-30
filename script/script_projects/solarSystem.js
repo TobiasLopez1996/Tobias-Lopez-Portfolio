@@ -1,6 +1,3 @@
-import gsap from "/Tobias-Lopez-Portfolio/node_modules/gsap/src/index.js"
-import ScrollTrigger from "../../node_modules/gsap/src/ScrollTrigger.js"
-
 // anim home
 const animRight = document.querySelectorAll(".anim-right")
 const animLeft = document.querySelectorAll(".anim-left")
